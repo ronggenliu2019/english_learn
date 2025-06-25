@@ -1,0 +1,111 @@
+#el-subtitle-overlay {
+  position: absolute;
+  left: 50% !important;
+  right: unset !important;
+  bottom: 60px;
+  z-index: 10000;
+  text-align: center;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.7) !important;
+  padding: 9px 15px;
+  border-radius: 10px;
+  width: max-content;
+  min-width: 120px;
+  max-width: 95vw;
+  margin-left: 0;
+  margin-right: 0;
+  transform: translateX(-50%) translateY(0);
+  transition: width 0.3s ease-in-out;
+}
+
+#el-subtitle-overlay span {
+  margin-right: 0.8em;
+}
+
+.active-word {
+  color: #FFA500 !important;
+  text-shadow: 0 0 8px rgba(255,165,0,0.5);
+  /* font-weight: 900 !important; */
+  text-stroke: 0.5px #fff;
+  transition: all 0.3s ease;
+}
+
+.el-subtitle-line {
+  white-space: nowrap;
+  display: inline-block !important;
+  background: rgba(0,0,0,0) !important; /* 增加不透明度从0.7到0.9 */
+  color: #fff;
+  font-size: 3.5em !important;
+  font-family: 'Georgia', 'Times New Roman', serif !important;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  pointer-events: auto;
+  word-spacing: 0.6em !important;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.el-complex-word {
+  color: #ffd700;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  pointer-events: auto;
+}
+
+#el-subtitle-controls {
+  position: absolute;
+  left: 10px;
+  bottom: 110px;
+  z-index: 10001;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  pointer-events: auto;
+}
+
+#el-subtitle-upload {
+  color: #fff;
+  font-size: 0.95em;
+}
+
+#el-dict-modal {
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 10010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+#el-dict-modal-content {
+  background: #fff;
+  color: #222;
+  padding: 24px 32px;
+  border-radius: 12px;
+  min-width: 260px;
+  max-width: 90vw;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  text-align: left;
+  position: relative;
+}
+
+#el-dict-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2em;
+  color: #888;
+  cursor: pointer;
+}
+
+.el-current-word {
+  background-color: yellow;
+  color: black;
+}

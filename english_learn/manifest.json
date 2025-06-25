@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "English Learn YouTube Subtitles",
+  "version": "0.1.0",
+  "description": "Load YouTube videos, display synced subtitles, highlight complex words, and provide word definitions.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+} 
